@@ -1,0 +1,62 @@
+# =============================================================================
+# cluster.yaml – Kubernetes Cluster Configuration
+# =============================================================================
+# Edit this file to customise your cluster before running `vagrant up`.
+# Add/remove nodes under the `nodes` section as needed.
+# Each node requires: name, ip, memory (MB), cpus, and role.
+# Roles: "controlplane" (exactly one) or "worker" (one or more).
+# =============================================================================
+
+cluster:
+  # Kubernetes networking
+  pod_cidr: "10.244.0.0/16"
+  service_cidr: "10.96.0.0/16"
+
+  # Calico CNI version
+  calico_version: "v3.31.5"
+
+  # Base OS box for all VMs
+  box: "ubuntu/jammy64"
+
+# =============================================================================
+# Node Definitions
+# =============================================================================
+# To add more worker nodes:
+#   1. Copy one of the worker blocks below
+#   2. Change name, ip (increment last octet), and adjust memory/cpus
+#   3. Save and run: vagrant up
+#
+# Host IP range: 192.168.56.x  (x = 10 for control plane, 11+ for workers)
+# =============================================================================
+
+nodes:
+  - name: "controlplane"
+    ip: "192.168.56.10"
+    memory: 2048          # MB  — minimum 2048 for control plane
+    cpus: 2
+    role: "controlplane"
+
+  - name: "node01"
+    ip: "192.168.56.11"
+    memory: 1536          # MB  — minimum 1024 for workers
+    cpus: 1
+    role: "worker"
+
+  - name: "node02"
+    ip: "192.168.56.12"
+    memory: 1536
+    cpus: 1
+    role: "worker"
+
+  # ── Add more workers below ──────────────────────────────────────────────────
+  - name: "node03"
+    ip: "192.168.56.13"
+    memory: 1536
+    cpus: 1
+    role: "worker"
+  #
+  # - name: "node04"
+  #   ip: "192.168.56.14"
+  #   memory: 2048
+  #   cpus: 2
+  #   role: "worker"

@@ -1,0 +1,25 @@
+# Private research and internal documentation (DO NOT PUSH)
+Research/Private/
+
+# Vagrant local state (DO NOT PUSH)
+.vagrant/
+
+# Sensitive Kubernetes join command
+join-command.sh
+join_command.sh
+join*.sh
+
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temp files
+*.tmp
+*.swp
+
+# Optional: ignore kube config if generated locally
+kubeconfig
+*.kubeconfig
