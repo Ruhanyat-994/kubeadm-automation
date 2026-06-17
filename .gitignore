@@ -23,3 +23,6 @@ Thumbs.db
 # Optional: ignore kube config if generated locally
 kubeconfig
 *.kubeconfig
+
+# MkDocs build output directory
+site/

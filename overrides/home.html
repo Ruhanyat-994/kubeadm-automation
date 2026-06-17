@@ -1,0 +1,143 @@
+{% extends "main.html" %}
+
+{% block tabs %}
+  {{ super() }}
+
+  <section class="ka-hero">
+    <div class="md-grid">
+      <div class="ka-hero__inner">
+        <div class="ka-hero__content">
+          <h1 class="ka-hero__title">KubeAuto</h1>
+          <p class="ka-hero__subtitle">Kubeadm Automation Tool</p>
+          <p class="ka-hero__description">
+            KubeAuto simplifies the deployment of multi-node
+            Kubernetes clusters using kubeadm.
+            Automate, deploy, and manage your Kubernetes clusters
+            in just a few clicks or commands.
+          </p>
+          <div class="ka-hero__buttons">
+            <a href="getting-started/quick-start/" class="md-button md-button--primary ka-btn--primary">
+              <span class="ka-btn-icon">⚡</span> Quick Start
+            </a>
+            <a href="https://github.com/Ruhanyat-994/kubeadm-automation" class="md-button ka-btn--secondary" target="_blank" rel="noopener">
+              <span class="ka-btn-icon">🐙</span> View on GitHub
+            </a>
+          </div>
+        </div>
+        <div class="ka-hero__image">
+          <img src="assets/hero.png" alt="KubeAuto — Kubernetes cluster automation" draggable="false">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ka-features">
+    <div class="md-grid">
+      <div class="ka-features__grid">
+
+        <div class="ka-feature-card">
+          <div class="ka-feature-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path fill="currentColor" d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.49.49 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96a.49.49 0 0 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.07.62-.07.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6A3.6 3.6 0 1 1 12 8.4a3.6 3.6 0 0 1 0 7.2z"/></svg>
+          </div>
+          <h3 class="ka-feature-card__title">Automated Deployment</h3>
+          <p class="ka-feature-card__description">
+            Deploy multi-node Kubernetes clusters with kubeadm automatically.
+          </p>
+        </div>
+
+        <div class="ka-feature-card">
+          <div class="ka-feature-card__icon ka-feature-card__icon--green">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path fill="currentColor" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+          </div>
+          <h3 class="ka-feature-card__title">Production Ready</h3>
+          <p class="ka-feature-card__description">
+            Built with best practices for security, reliability, and scalability.
+          </p>
+        </div>
+
+        <div class="ka-feature-card">
+          <div class="ka-feature-card__icon ka-feature-card__icon--blue">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path fill="currentColor" d="M20 19V7H4v12h16m0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16zM13 9v2h4v2h-4v2l-3-3 3-3z"/></svg>
+          </div>
+          <h3 class="ka-feature-card__title">CLI First</h3>
+          <p class="ka-feature-card__description">
+            Powerful CLI interface for automation and integration with CI/CD pipelines.
+          </p>
+        </div>
+
+        <div class="ka-feature-card">
+          <div class="ka-feature-card__icon ka-feature-card__icon--purple">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path fill="currentColor" d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+          </div>
+          <h3 class="ka-feature-card__title">Well Documented</h3>
+          <p class="ka-feature-card__description">
+            Comprehensive guides, examples, and reference documentation.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="ka-why">
+    <div class="md-grid">
+      <h2 class="ka-why__title">Why KubeAuto?</h2>
+      <div class="ka-why__grid">
+        <div class="ka-why__item">
+          <span class="ka-why__check">✓</span>
+          <span>Simple and intuitive command-line interface</span>
+        </div>
+        <div class="ka-why__item">
+          <span class="ka-why__check">✓</span>
+          <span>Idempotent operations</span>
+        </div>
+        <div class="ka-why__item">
+          <span class="ka-why__check">✓</span>
+          <span>Supports various Linux distributions</span>
+        </div>
+        <div class="ka-why__item">
+          <span class="ka-why__check">✓</span>
+          <span>Extensible and configurable</span>
+        </div>
+        <div class="ka-why__item">
+          <span class="ka-why__check">✓</span>
+          <span>Built-in validation and error handling</span>
+        </div>
+        <div class="ka-why__item">
+          <span class="ka-why__check">✓</span>
+          <span>Active development and community support</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ka-example">
+    <div class="md-grid">
+      <h2 class="ka-example__title">Quick Example</h2>
+      <div class="ka-example__code">
+        <div class="ka-example__header">
+          <span class="ka-example__lang">bash</span>
+          <button class="ka-example__copy" onclick="navigator.clipboard.writeText(this.closest('.ka-example__code').querySelector('code').textContent).then(()=>{this.textContent='Copied!';setTimeout(()=>{this.textContent='Copy'},2000)})">Copy</button>
+        </div>
+        <pre><code><span class="c"># Clone the repository</span>
+git clone https://github.com/Ruhanyat-994/kubeadm-automation.git
+cd kubeadm-automation
+
+<span class="c"># (Optional) Edit cluster topology</span>
+nano cluster.yaml
+
+<span class="c"># Deploy a multi-node Kubernetes cluster</span>
+vagrant up
+
+<span class="c"># SSH into the control plane</span>
+vagrant ssh controlplane
+
+<span class="c"># Verify your cluster</span>
+kubectl get nodes</code></pre>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
+
+{% block content %}{% endblock %}

@@ -1,0 +1,140 @@
+site_name: KubeAuto
+site_description: "Kubeadm Automation Tool — Deploy multi-node Kubernetes clusters automatically using Vagrant and VirtualBox"
+site_author: Ruhanyat-994
+site_url: https://ruhanyat-994.github.io/projects/kubeauto/docs/
+repo_name: Ruhanyat-994/kubeadm-automation
+repo_url: https://github.com/Ruhanyat-994/kubeadm-automation
+edit_uri: edit/main/docs/
+copyright: Copyright &copy; 2026 KubeAuto
+
+theme:
+  name: material
+  custom_dir: overrides
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Inter
+    code: Roboto Mono
+  icon:
+    logo: material/kubernetes
+    repo: fontawesome/brands/github
+  language: en
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      title: On this page
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+  - minify:
+      minify_html: true
+
+nav:
+  - Home: index.md
+  - Guides:
+    - Getting Started:
+      - Prerequisites: getting-started/prerequisites.md
+      - System Requirements: getting-started/system-requirements.md
+      - Architecture: getting-started/architecture.md
+      - Quick Start: getting-started/quick-start.md
+    - Installation:
+      - Installation Guide: installation/installation-guide.md
+      - Configuration: installation/configuration.md
+    - Usage:
+      - Basic Usage: usage/basic-usage.md
+      - Advanced Options: usage/advanced-options.md
+      - Multi-node Cluster: usage/multi-node-cluster.md
+    - Operations:
+      - Cluster Management: operations/cluster-management.md
+      - Troubleshooting: operations/troubleshooting.md
+  - Reference:
+    - reference/index.md
+    - Configuration Reference: reference/configuration-reference.md
+    - Scripts Reference: reference/scripts-reference.md
+    - Environment Variables: reference/environment-variables.md
+  - Examples:
+    - examples/index.md
+    - Sample Configurations: examples/sample-configurations.md
+    - Example Scenarios: examples/example-scenarios.md
+  - FAQ: faq.md
+  - About:
+    - about/index.md
+    - Contributing: about/contributing.md
+    - Release Notes: about/release-notes.md
+
+extra:
+  version:
+    provider: mike
+    default: latest
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Ruhanyat-994/kubeadm-automation
+      name: KubeAuto on GitHub
+  generator: true

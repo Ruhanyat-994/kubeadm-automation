@@ -1,0 +1,464 @@
+/* ============================================================================
+   KubeAuto Documentation — Custom Styles
+   Matches the design mockups (light + dark mode)
+   ============================================================================ */
+
+/* --------------------------------------------------------------------------
+   CSS Custom Properties
+   -------------------------------------------------------------------------- */
+:root {
+  --ka-primary: #009688;
+  --ka-primary-light: #26a69a;
+  --ka-primary-lighter: #b2dfdb;
+  --ka-primary-lightest: #e0f2f1;
+  --ka-primary-dark: #00796b;
+  --ka-accent: #00bcd4;
+  --ka-green: #4caf50;
+  --ka-blue: #2196f3;
+  --ka-purple: #7c4dff;
+  --ka-text: #1a1a2e;
+  --ka-text-secondary: #5f6368;
+  --ka-surface: #ffffff;
+  --ka-surface-dim: #f8f9fa;
+  --ka-border: #e0e0e0;
+  --ka-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --ka-shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --ka-radius: 12px;
+  --ka-radius-sm: 8px;
+  --ka-transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-md-color-scheme="slate"] {
+  --ka-primary: #26a69a;
+  --ka-primary-light: #4db6ac;
+  --ka-primary-lighter: #1a3a36;
+  --ka-primary-lightest: #0f2623;
+  --ka-primary-dark: #00897b;
+  --ka-text: #e8eaed;
+  --ka-text-secondary: #9e9e9e;
+  --ka-surface: #1e1e2e;
+  --ka-surface-dim: #151521;
+  --ka-border: #2d2d44;
+  --ka-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --ka-shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+
+/* --------------------------------------------------------------------------
+   Hero Section
+   -------------------------------------------------------------------------- */
+.ka-hero {
+  padding: 3rem 0 2rem;
+  background: var(--ka-surface);
+  border-bottom: 1px solid var(--ka-border);
+}
+
+.ka-hero__inner {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.ka-hero__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.ka-hero__title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: var(--ka-text);
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.ka-hero__subtitle {
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--ka-text-secondary);
+  margin: 0.5rem 0 0;
+}
+
+.ka-hero__description {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--ka-text-secondary);
+  margin: 1.25rem 0 1.75rem;
+  max-width: 500px;
+}
+
+.ka-hero__buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.ka-btn--primary {
+  background-color: var(--ka-primary) !important;
+  color: #ffffff !important;
+  border-color: var(--ka-primary) !important;
+  padding: 0.65rem 1.5rem !important;
+  font-weight: 600 !important;
+  border-radius: var(--ka-radius-sm) !important;
+  transition: all var(--ka-transition) !important;
+  text-transform: none !important;
+}
+
+.ka-btn--primary:hover {
+  background-color: var(--ka-primary-dark) !important;
+  border-color: var(--ka-primary-dark) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 150, 136, 0.35);
+}
+
+.ka-btn--secondary {
+  background-color: transparent !important;
+  color: var(--ka-text) !important;
+  border: 1.5px solid var(--ka-border) !important;
+  padding: 0.65rem 1.5rem !important;
+  font-weight: 600 !important;
+  border-radius: var(--ka-radius-sm) !important;
+  transition: all var(--ka-transition) !important;
+  text-transform: none !important;
+}
+
+.ka-btn--secondary:hover {
+  border-color: var(--ka-primary) !important;
+  color: var(--ka-primary) !important;
+  transform: translateY(-1px);
+}
+
+.ka-btn-icon {
+  margin-right: 0.35rem;
+}
+
+.ka-hero__image {
+  flex: 0 0 380px;
+  max-width: 380px;
+}
+
+.ka-hero__image img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--ka-radius);
+}
+
+
+/* --------------------------------------------------------------------------
+   Feature Cards Section
+   -------------------------------------------------------------------------- */
+.ka-features {
+  padding: 3rem 0;
+  background: var(--ka-surface);
+}
+
+.ka-features__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.ka-feature-card {
+  background: var(--ka-surface);
+  border: 1px solid var(--ka-border);
+  border-radius: var(--ka-radius);
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  transition: all var(--ka-transition);
+  box-shadow: var(--ka-shadow);
+}
+
+.ka-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ka-shadow-hover);
+  border-color: var(--ka-primary-light);
+}
+
+.ka-feature-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: var(--ka-primary-lightest);
+  color: var(--ka-primary);
+  margin-bottom: 1rem;
+  transition: all var(--ka-transition);
+}
+
+.ka-feature-card__icon--green {
+  background: rgba(76, 175, 80, 0.1);
+  color: var(--ka-green);
+}
+
+.ka-feature-card__icon--blue {
+  background: rgba(33, 150, 243, 0.1);
+  color: var(--ka-blue);
+}
+
+.ka-feature-card__icon--purple {
+  background: rgba(124, 77, 255, 0.1);
+  color: var(--ka-purple);
+}
+
+.ka-feature-card:hover .ka-feature-card__icon {
+  transform: scale(1.1);
+}
+
+.ka-feature-card__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ka-text);
+  margin: 0 0 0.5rem;
+}
+
+.ka-feature-card__description {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--ka-text-secondary);
+  margin: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   Why KubeAuto Section
+   -------------------------------------------------------------------------- */
+.ka-why {
+  padding: 2.5rem 0;
+  background: var(--ka-surface);
+}
+
+.ka-why__title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--ka-primary);
+  margin: 0 0 1.25rem;
+}
+
+.ka-why__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem 3rem;
+}
+
+.ka-why__item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.95rem;
+  color: var(--ka-text);
+  padding: 0.35rem 0;
+}
+
+.ka-why__check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--ka-primary-lightest);
+  color: var(--ka-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   Quick Example Section
+   -------------------------------------------------------------------------- */
+.ka-example {
+  padding: 2rem 0 3.5rem;
+  background: var(--ka-surface);
+}
+
+.ka-example__title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--ka-primary);
+  margin: 0 0 1rem;
+}
+
+.ka-example__code {
+  background: var(--ka-surface-dim);
+  border: 1px solid var(--ka-border);
+  border-radius: var(--ka-radius);
+  overflow: hidden;
+}
+
+.ka-example__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--ka-border);
+  background: var(--ka-surface);
+}
+
+.ka-example__lang {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ka-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ka-example__copy {
+  background: transparent;
+  border: 1px solid var(--ka-border);
+  border-radius: 6px;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--ka-text-secondary);
+  cursor: pointer;
+  transition: all var(--ka-transition);
+}
+
+.ka-example__copy:hover {
+  border-color: var(--ka-primary);
+  color: var(--ka-primary);
+  background: var(--ka-primary-lightest);
+}
+
+.ka-example__code pre {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  overflow-x: auto;
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.ka-example__code code {
+  font-family: "Roboto Mono", "SFMono-Regular", Consolas, monospace;
+  color: var(--ka-text);
+}
+
+.ka-example__code code .c {
+  color: var(--ka-text-secondary);
+}
+
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 960px) {
+  .ka-hero__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ka-hero__description {
+    max-width: 100%;
+  }
+
+  .ka-hero__buttons {
+    justify-content: center;
+  }
+
+  .ka-hero__image {
+    flex: none;
+    max-width: 300px;
+  }
+
+  .ka-features__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ka-why__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ka-hero__title {
+    font-size: 2.2rem;
+  }
+
+  .ka-features__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ka-hero__image {
+    max-width: 240px;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   General Theme Refinements
+   -------------------------------------------------------------------------- */
+
+/* Sidebar navigation section labels */
+.md-nav__title {
+  font-weight: 700;
+}
+
+/* Sidebar active item highlight */
+.md-nav__item--active > .md-nav__link {
+  color: var(--ka-primary) !important;
+  font-weight: 600;
+}
+
+/* Content area — better typography */
+.md-typeset h1 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.md-typeset h2 {
+  font-weight: 700;
+  margin-top: 2rem;
+}
+
+/* Admonition improvements */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: var(--ka-radius-sm);
+  box-shadow: var(--ka-shadow);
+  border-width: 0 0 0 4px;
+}
+
+/* Code block improvements */
+.md-typeset pre > code {
+  border-radius: var(--ka-radius-sm);
+}
+
+/* Table improvements */
+.md-typeset table:not([class]) {
+  border-radius: var(--ka-radius-sm);
+  overflow: hidden;
+  box-shadow: var(--ka-shadow);
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--ka-primary);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) th {
+  background: var(--ka-primary-dark);
+}
+
+/* Footer refinement */
+.md-footer {
+  border-top: 1px solid var(--ka-border);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header shadow */
+.md-header {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+[data-md-color-scheme="slate"] .md-header {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
